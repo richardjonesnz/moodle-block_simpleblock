@@ -77,6 +77,9 @@ class block_simpleblock extends block_base {
         $this->content = new stdClass();
         $this->content->footer = '';
         $this->content->text = get_string('welcomeuser', 'block_simpleblock', $USER);
+        $this->content->text .= '<br /><a href="' . $CFG->wwwroot .
+                '/blocks/simpleblock/view.php">' . get_string('viewlink', 'block_simpleblock') .
+                '</a>';
 
         return $this->content;
     }

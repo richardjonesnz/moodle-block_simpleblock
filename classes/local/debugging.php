@@ -13,24 +13,29 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
 /**
- * Strings for component 'block_simpleblock', language 'en'
+ * Simple debugging class
  *
- * @package   block_simpleblock
- * @copyright  Daniel Neis <danielneis@gmail.com>
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
-/**
- * Modified for use in NZ Moot Workshop
- * by Richard Jones.
- *
+ * @package    block_simpleblock
+ * @copyright  2019 Richard Jones richardnz@outlook.com
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-// General.
-$string['pluginname'] = 'Simple block';
-$string['welcomeuser'] = 'Welcome {$a->firstname} {$a->lastname}';
-$string['viewlink'] = 'View page';
+namespace block_simpleblock\local;
 
-// Capability strings.
-$string['simpleblock:addinstance'] = 'Add a new Simple block';
-$string['simpleblock:myaddinstance'] = 'Add a new Simple block to my moodle';
+defined('MOODLE_INTERNAL') || die();
+
+class debugging {
+    public static function logit($message, $value) {
+
+        $file = fopen('mylog.log', 'a');
+
+        if ($file) {
+            fwrite($file, print_r($message, true));
+            fwrite($file, print_r($value, true));
+            fwrite($file, "\n");
+            fclose($file);
+        }
+    }
+}

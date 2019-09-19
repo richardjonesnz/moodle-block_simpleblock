@@ -1,0 +1,267 @@
+The $PAGE object: moodle_page Object
+(
+    [_state:protected] => 0
+    [_course:protected] => stdClass Object
+        (
+            [id] => 1
+            [category] => 0
+            [sortorder] => 1
+            [fullname] => Moodle 3.7
+            [shortname] => moodle37
+            [idnumber] => 
+            [summary] => 
+            [summaryformat] => 0
+            [format] => site
+            [showgrades] => 1
+            [newsitems] => 3
+            [startdate] => 0
+            [enddate] => 0
+            [marker] => 0
+            [maxbytes] => 0
+            [legacyfiles] => 0
+            [showreports] => 0
+            [visible] => 1
+            [visibleold] => 1
+            [groupmode] => 0
+            [groupmodeforce] => 0
+            [defaultgroupingid] => 0
+            [lang] => 
+            [calendartype] => 
+            [theme] => 
+            [timecreated] => 1558473312
+            [timemodified] => 1558473986
+            [requested] => 0
+            [enablecompletion] => 0
+            [completionnotify] => 0
+            [cacherev] => 1568929436
+        )
+
+    [_cm:protected] => 
+    [_module:protected] => 
+    [_context:protected] => context_course Object
+        (
+            [_id:protected] => 2
+            [_contextlevel:protected] => 50
+            [_instanceid:protected] => 1
+            [_path:protected] => /1/2
+            [_depth:protected] => 2
+            [_locked:protected] => 0
+        )
+
+    [_categories:protected] => 
+    [_bodyclasses:protected] => Array
+        (
+            [format-site] => 1
+        )
+
+    [_title:protected] => Simple block
+    [_heading:protected] => Moodle 3.7
+    [_pagetype:protected] => blocks-simpleblock-view
+    [_pagelayout:protected] => course
+    [_layout_options:protected] => 
+    [_subpage:protected] => 
+    [_docspath:protected] => 
+    [_legacyclass:protected] => 
+    [_url:protected] => moodle_url Object
+        (
+            [scheme:protected] => http
+            [host:protected] => 192.168.1.100
+            [port:protected] => 
+            [user:protected] => 
+            [pass:protected] => 
+            [path:protected] => /moodle37/blocks/simpleblock/view.php
+            [slashargument:protected] => 
+            [anchor:protected] => 
+            [params:protected] => Array
+                (
+                )
+
+        )
+
+    [_alternateversions:protected] => Array
+        (
+        )
+
+    [_blocks:protected] => 
+    [_requires:protected] => 
+    [savedrequires:protected] => 
+    [_blockseditingcap:protected] => moodle/site:manageblocks
+    [_block_actions_done:protected] => 
+    [_othereditingcaps:protected] => Array
+        (
+        )
+
+    [_cacheable:protected] => 1
+    [_focuscontrol:protected] => 
+    [_button:protected] => 
+    [_theme:protected] => 
+    [_navigation:protected] => 
+    [_settingsnav:protected] => 
+    [_flatnav:protected] => 
+    [_navbar:protected] => 
+    [_headingmenu:protected] => 
+    [_wherethemewasinitialised:protected] => 
+    [_opencontainers:protected] => 
+    [_periodicrefreshdelay:protected] => 
+    [_legacybrowsers:protected] => Array
+        (
+            [MSIE] => 6
+        )
+
+    [_devicetypeinuse:protected] => 
+    [_https_login_required:protected] => 
+    [_popup_notification_allowed:protected] => 1
+    [_forcesettingsmenu:protected] => 
+)
+
+The $PAGE object: moodle_page Object
+(
+    [_state:protected] => 0
+    [_course:protected] => stdClass Object
+        (
+            [id] => 1
+            [category] => 0
+            [sortorder] => 1
+            [fullname] => Moodle 3.7
+            [shortname] => moodle37
+            [idnumber] => 
+            [summary] => 
+            [summaryformat] => 0
+            [format] => site
+            [showgrades] => 1
+            [newsitems] => 3
+            [startdate] => 0
+            [enddate] => 0
+            [marker] => 0
+            [maxbytes] => 0
+            [legacyfiles] => 0
+            [showreports] => 0
+            [visible] => 1
+            [visibleold] => 1
+            [groupmode] => 0
+            [groupmodeforce] => 0
+            [defaultgroupingid] => 0
+            [lang] => 
+            [calendartype] => 
+            [theme] => 
+            [timecreated] => 1558473312
+            [timemodified] => 1558473986
+            [requested] => 0
+            [enablecompletion] => 0
+            [completionnotify] => 0
+            [cacherev] => 1568929754
+        )
+
+    [_cm:protected] => 
+    [_module:protected] => 
+    [_context:protected] => context_course Object
+        (
+            [_id:protected] => 2
+            [_contextlevel:protected] => 50
+            [_instanceid:protected] => 1
+            [_path:protected] => /1/2
+            [_depth:protected] => 2
+            [_locked:protected] => 0
+        )
+
+    [_categories:protected] => 
+    [_bodyclasses:protected] => Array
+        (
+            [format-site] => 1
+        )
+
+    [_title:protected] => Simple block
+    [_heading:protected] => Moodle 3.7
+    [_pagetype:protected] => blocks-simpleblock-view
+    [_pagelayout:protected] => course
+    [_layout_options:protected] => 
+    [_subpage:protected] => 
+    [_docspath:protected] => 
+    [_legacyclass:protected] => 
+    [_url:protected] => moodle_url Object
+        (
+            [scheme:protected] => http
+            [host:protected] => 192.168.1.100
+            [port:protected] => 
+            [user:protected] => 
+            [pass:protected] => 
+            [path:protected] => /moodle37/blocks/simpleblock/view.php
+            [slashargument:protected] => 
+            [anchor:protected] => 
+            [params:protected] => Array
+                (
+                )
+
+        )
+
+    [_alternateversions:protected] => Array
+        (
+        )
+
+    [_blocks:protected] => 
+    [_requires:protected] => 
+    [savedrequires:protected] => 
+    [_blockseditingcap:protected] => moodle/site:manageblocks
+    [_block_actions_done:protected] => 
+    [_othereditingcaps:protected] => Array
+        (
+        )
+
+    [_cacheable:protected] => 1
+    [_focuscontrol:protected] => 
+    [_button:protected] => 
+    [_theme:protected] => 
+    [_navigation:protected] => 
+    [_settingsnav:protected] => 
+    [_flatnav:protected] => 
+    [_navbar:protected] => 
+    [_headingmenu:protected] => 
+    [_wherethemewasinitialised:protected] => 
+    [_opencontainers:protected] => 
+    [_periodicrefreshdelay:protected] => 
+    [_legacybrowsers:protected] => Array
+        (
+            [MSIE] => 6
+        )
+
+    [_devicetypeinuse:protected] => 
+    [_https_login_required:protected] => 
+    [_popup_notification_allowed:protected] => 1
+    [_forcesettingsmenu:protected] => 
+)
+
+The $OUTPUT object: bootstrap_renderer Object
+(
+    [initialising:protected] => 
+)
+
+The $OUTPUT object: bootstrap_renderer Object
+(
+    [initialising:protected] => 
+)
+
+The $OUTPUT object: bootstrap_renderer Object
+(
+    [initialising:protected] => 
+)
+
+The $OUTPUT object: bootstrap_renderer Object
+(
+    [initialising:protected] => 
+)
+
+The $OUTPUT object: bootstrap_renderer Object
+(
+    [initialising:protected] => 
+)
+
+The $OUTPUT object: bootstrap_renderer Object
+(
+    [initialising:protected] => 
+)
+
+The $OUTPUT object: bootstrap_renderer Object
+(
+    [initialising:protected] => 
+)
+
