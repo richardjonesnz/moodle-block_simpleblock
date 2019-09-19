@@ -21,7 +21,6 @@
  * Modified for use in MoodleBites for Developers Level 1 by Richard Jones & Justin Hunt
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-use \block_simpleblock\local\debugging;
 
 require('../../config.php');
 
@@ -31,8 +30,6 @@ $PAGE->set_heading($SITE->fullname);
 $PAGE->set_pagelayout('course');
 $PAGE->set_title(get_string('pluginname', 'block_simpleblock'));
 
-debugging::logit('The $OUTPUT object: ', $OUTPUT);
-
 require_login();
 
 // Start output to browser.
@@ -41,7 +38,6 @@ echo $OUTPUT->heading(get_string('pluginname', 'block_simpleblock'), 5);
 
 // Some content goes here.
 echo '<br>' . fullname($USER);
-echo $OUTPUT->user_picture($USER);
 
 // Send footer out to browser.
 echo $OUTPUT->footer();
