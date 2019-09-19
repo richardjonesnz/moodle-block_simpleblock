@@ -27,7 +27,7 @@
  */
 
 // General.
-$string['pluginname'] = 'Super block';
+$string['pluginname'] = 'Simple block';
 $string['welcomeuser'] = 'Welcome {$a->firstname} {$a->lastname}';
 
 // Capability strings.
