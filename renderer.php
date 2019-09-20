@@ -14,24 +14,26 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 /**
- * simpleblock view page
+ * simpleblock renderer
  *
  * @package    block_simpleblock
- * @copyright  Daniel Neis <danielneis@gmail.com>
- * Modified for use in MoodleBites for Developers Level 1 by Richard Jones & Justin Hunt
+ * @copyright  by Justin Hunt
+ * Modified for use in Developers Workshop by Richard Jones
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-require('../../config.php');
+class block_simpleblock_renderer extends plugin_renderer_base {
 
-$PAGE->set_course($COURSE);
-$PAGE->set_url('/blocks/simpleblock/view.php');
-$PAGE->set_heading($SITE->fullname);
-$PAGE->set_pagelayout('course');
-$PAGE->set_title(get_string('pluginname', 'block_simpleblock'));
+    function display_view_page() {
+        global $USER;
 
-require_login();
+        // Set up data object for template.
+        $data = new stdClass();
+        $data->heading = get_string('pluginname', 'block_simpleblock');
+        $data->content = fullname($USER);
 
-// Get renderer.
-$renderer = $PAGE->get_renderer('block_simpleblock');
-$renderer->display_view_page();
+        echo $this->output->header();
+        echo $this->render_from_template('block_simpleblock/viewpage', $data);
+        echo $this->output->footer();
+    }
+}

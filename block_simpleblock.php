@@ -100,5 +100,4 @@ class block_simpleblock extends block_base {
     function instance_allow_multiple() {
         return true;
     }
-
 }
