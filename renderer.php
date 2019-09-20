@@ -41,4 +41,14 @@ class block_simpleblock_renderer extends plugin_renderer_base {
         echo $this->render_from_template('block_simpleblock/viewpage', $data);
         echo $this->output->footer();
     }
+
+    public function fetch_block_content($blockid) {
+        global $USER;
+        $data = new stdClass();
+        $data->welcome = get_string('welcomeuser', 'block_simpleblock', $USER);
+        $data->url = new moodle_url('/blocks/simpleblock/view.php', ['blockid' => $blockid]);
+        $data->text = get_string('viewlink', 'block_simpleblock');
+
+        return $this->render_from_template('block_simpleblock/block_content', $data);
+    }
 }

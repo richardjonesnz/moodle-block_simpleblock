@@ -76,12 +76,11 @@ class block_simpleblock extends block_base {
         // OK let's add some content.
         $this->content = new stdClass();
         $this->content->footer = '';
-        $this->content->text = get_string('welcomeuser', 'block_simpleblock', $USER);
 
-        // Let's add the blockid as a parameter to the view page:
+        // Call the renderer to display the block content.
         $blockid = $this->instance->id;
-        $url = new moodle_url('/blocks/simpleblock/view.php', ['blockid' => $blockid]);
-        $this->content->text .= '<p>' . html_writer::link($url, get_string('viewlink', 'block_simpleblock')) . '</p>';
+        $renderer = $this->page->get_renderer('block_simpleblock');
+        $this->content->text = $renderer->fetch_block_content($blockid);
 
         return $this->content;
     }

@@ -30,6 +30,6 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2019091906;
+$plugin->version   = 2019092100;
 $plugin->requires  = 2017111300;
 $plugin->component = 'block_simpleblock';
