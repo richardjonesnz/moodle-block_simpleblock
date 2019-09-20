@@ -25,6 +25,7 @@
 class block_simpleblock_renderer extends plugin_renderer_base {
 
     function display_view_page() {
+        global $USER;
 
         // Start output to browser.
         echo $this->output->header();
