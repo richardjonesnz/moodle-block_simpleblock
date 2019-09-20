@@ -77,9 +77,11 @@ class block_simpleblock extends block_base {
         $this->content = new stdClass();
         $this->content->footer = '';
         $this->content->text = get_string('welcomeuser', 'block_simpleblock', $USER);
-        $this->content->text .= '<br /><a href="' . $CFG->wwwroot .
-                '/blocks/simpleblock/view.php">' . get_string('viewlink', 'block_simpleblock') .
-                '</a>';
+
+        // Let's add the blockid as a parameter to the view page:
+        $blockid = $this->instance->id;
+        $url = new moodle_url('/blocks/simpleblock/view.php', ['blockid' => $blockid]);
+        $this->content->text .= '<p>' . html_writer::link($url, get_string('viewlink', 'block_simpleblock')) . '</p>';
 
         return $this->content;
     }

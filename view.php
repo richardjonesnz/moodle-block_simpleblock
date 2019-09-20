@@ -23,6 +23,8 @@
  */
 
 require('../../config.php');
+// A required parameter.
+$blockid = required_param('blockid', PARAM_INT);
 
 $PAGE->set_course($COURSE);
 $PAGE->set_url('/blocks/simpleblock/view.php');
@@ -32,7 +34,42 @@ $PAGE->set_title(get_string('pluginname', 'block_simpleblock'));
 
 require_login();
 
-$config = get_config('block_simpleblock');
+$adminconfig = get_config('block_simpleblock');
 
+// Get the instance configuration data from the database.
+// It's stored as a base 64 encoded serialized string.
+$configdata = $DB->get_field('block_instances', 'configdata', ['id' => $blockid]);
+
+if ($configdata) { // If it exists.
+    $config = unserialize(base64_decode($configdata));
+} else {
+    // No instance data, use admin settings.
+    // However, that only specifies height and width, not size.
+   $config = $adminconfig;
+   $config->size = 'custom';
+}
+
+// Now we will pass the url and size data to the renderer.
+$url = $config->url;
+// Size data
+switch ($config->size) {
+    case 'custom':
+        $width = $adminconfig->width;
+        $height = $adminconfig->height;
+        break;
+    case 'small' :
+        $width = 360;
+        $height = 240;
+        break;
+    case 'medium' :
+        $width = 600;
+        $height = 400;
+        break;
+    case 'large' :
+        $width = 1024;
+        $height = 720;
+        break;
+}
+// Pass the data to the renderer.
 $renderer = $PAGE->get_renderer('block_simpleblock');
-$renderer->display_view_page($config);
+$renderer->display_view_page($url, $width, $height);

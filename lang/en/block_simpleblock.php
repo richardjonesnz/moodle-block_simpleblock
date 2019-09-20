@@ -44,3 +44,10 @@ $string['height'] = 'Height';
 $string['height_details'] = 'Height of the frame (px)';
 $string['width'] = 'Width';
 $string['width_details'] = 'Width of the frame (px)';
+
+// Edit form strings.
+$string['size'] = 'Select a size for your iframe';
+$string['custom'] = 'Custom';
+$string['small'] = 'Small';
+$string['medium'] = 'Medium';
+$string['large'] = 'Large';

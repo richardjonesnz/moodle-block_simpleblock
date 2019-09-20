@@ -24,7 +24,7 @@
 
 class block_simpleblock_renderer extends plugin_renderer_base {
 
-    function display_view_page($config) {
+    function display_view_page($url, $width, $height) {
         global $USER;
 
         // Set up data object for template.
@@ -32,10 +32,10 @@ class block_simpleblock_renderer extends plugin_renderer_base {
         $data->heading = get_string('pluginname', 'block_simpleblock');
         $data->content = fullname($USER);
 
-        // The iframe.
-        $data->url = $config->url;
-        $data->width = $config->width;
-        $data->height = $config->height;
+        // The iframe attributes.
+        $data->url = $url;
+        $data->width = $width;
+        $data->height = $height;
 
         echo $this->output->header();
         echo $this->render_from_template('block_simpleblock/viewpage', $data);
