@@ -32,5 +32,7 @@ $PAGE->set_title(get_string('pluginname', 'block_simpleblock'));
 
 require_login();
 
+$config = get_config('block_simpleblock');
+
 $renderer = $PAGE->get_renderer('block_simpleblock');
-$renderer->display_view_page();
+$renderer->display_view_page($config);

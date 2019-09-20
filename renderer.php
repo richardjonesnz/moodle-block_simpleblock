@@ -24,17 +24,21 @@
 
 class block_simpleblock_renderer extends plugin_renderer_base {
 
-    function display_view_page() {
+    function display_view_page($config) {
         global $USER;
 
-        // Start output to browser.
+        // Set up data object for template.
+        $data = new stdClass();
+        $data->heading = get_string('pluginname', 'block_simpleblock');
+        $data->content = fullname($USER);
+
+        // The iframe.
+        $data->url = $config->url;
+        $data->width = $config->width;
+        $data->height = $config->height;
+
         echo $this->output->header();
-        echo $this->output->heading(get_string('pluginname', 'block_simpleblock'), 5);
-
-        // Some content goes here.
-        echo '<br>' . fullname($USER);
-
-        // Send footer out to browser.
+        echo $this->render_from_template('block_simpleblock/viewpage', $data);
         echo $this->output->footer();
     }
 }

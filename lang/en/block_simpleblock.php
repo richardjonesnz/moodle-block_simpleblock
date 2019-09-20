@@ -34,3 +34,13 @@ $string['viewlink'] = 'View page';
 // Capability strings.
 $string['simpleblock:addinstance'] = 'Add a new Simple block';
 $string['simpleblock:myaddinstance'] = 'Add a new Simple block to my moodle';
+
+// Admin configuration settings strings.
+$string['headerconfig'] = 'Super frame settings';
+$string['headerconfigdesc'] = 'Settings for Super frame';
+$string['url'] = 'url';
+$string['url_details'] = 'Url to display';
+$string['height'] = 'Height';
+$string['height_details'] = 'Height of the frame (px)';
+$string['width'] = 'Width';
+$string['width_details'] = 'Width of the frame (px)';
