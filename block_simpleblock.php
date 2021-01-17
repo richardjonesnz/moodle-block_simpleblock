@@ -28,21 +28,8 @@
  *
  */
 
-
+use block_simpleblock\output\block;
 defined('MOODLE_INTERNAL') || die();
-
-/*
-
-Notice some rules that will keep plugin approvers happy when you want
-to register your plugin in the plugins database
-
-    Use 4 spaces to indent, no tabs
-    Use 8 spaces for continuation lines
-    Make sure every class has php doc to describe it
-    Describe the parameters of each class and function
-
-    https://docs.moodle.org/dev/Coding_style
-*/
 
 /**
  * Class simpleblock minimal required block class.
@@ -50,6 +37,7 @@ to register your plugin in the plugins database
  */
 
 class block_simpleblock extends block_base {
+
     /**
      * Initialize our block with a language string.
      */
@@ -61,7 +49,7 @@ class block_simpleblock extends block_base {
      * Add some text content to our block.
      */
     function get_content() {
-        global $USER, $CFG;
+        global $OUTPUT;
 
         // Do we have any content?
         if ($this->content !== null) {
@@ -73,11 +61,10 @@ class block_simpleblock extends block_base {
             return $this->content;
         }
 
-        // OK let's add some content.
+        // OK let's add some content to our block.
         $this->content = new stdClass();
+        $this->content->text = $OUTPUT->render(new block($this->instance->id));
         $this->content->footer = '';
-        $this->content->text = get_string('welcomeuser', 'block_simpleblock', $USER);
-
         return $this->content;
     }
     /**
